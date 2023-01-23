@@ -10,5 +10,5 @@ class Producer:
                                       )
 
     def producer_send(self, topic, data):
-        self.producer.send('test', value=data)
+        self.producer.send(topic, value=data)
         self.producer.flush()

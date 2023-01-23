@@ -1,8 +1,3 @@
-'''
-ver 0.0.1
-stopleaf
-'''
-
 import requests
 import bs4
 import xmltodict
