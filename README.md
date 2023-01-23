@@ -1,7 +1,10 @@
 # 서울시 실시간 도시 데이터 수집 
 
-### 목적
-    Kafka, Airflow 학습
+### 내용
+    Airflow, Kafka, MongoDB 학습 목적
+
+### 현재 목표
+    OpenAPI 데이터 수집 -> Kafka -> MongoDB -> ETL -> ... 
 
 ### 버전 관리
     ver 0.0.1 서울시 인구밀집지역 데이터 수집 테스트 코드 생성
