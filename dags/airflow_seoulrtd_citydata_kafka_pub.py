@@ -9,7 +9,7 @@ args = {
     "email_on_failure": False,
 }
 dag = DAG(
-    dag_id="get_seoulrtd_citydata",
+    dag_id="seoulrtd_citydata_kafka_pub",
     start_date=days_ago(1),
     schedule_interval="*/1 * * * *",
     max_active_runs=1,
@@ -22,7 +22,7 @@ end = EmptyOperator(task_id="end", dag=dag)
 
 t1 = BashOperator(
     task_id="collect_data",
-    bash_command="/Users/stopleaf/.pyenv/versions/seoul/bin/python /Users/stopleaf/PycharmProjects/seoulrtd_citydata/main.py pub",
+    bash_command="/Users/stopleaf/.pyenv/versions/seoul/bin/python /Users/stopleaf/PycharmProjects/seoulrtd_citydata/kafka_producer.py",
     retries=1,
     dag=dag,
 )
